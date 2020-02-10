@@ -10,7 +10,9 @@ public class SwingTest {
         JButton jButton = new JButton("My JButton");
         JButton jButton1 = new JButton("My JButton1");
 
-        // 匿名内部类
+        /**
+         * 匿名内部类
+         */
         jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -18,7 +20,9 @@ public class SwingTest {
             }
         });
 
-        // lambda表达式
+        /**
+         * lambda表达式
+         */
         jButton1.addActionListener(e -> {
             System.out.println("Button Pressed!");
         });
