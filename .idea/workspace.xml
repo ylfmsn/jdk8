@@ -4,8 +4,6 @@
     <list default="true" id="3db8dfde-4e56-42ef-b6c0-ac74c7d806db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/lambda表达式.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lambda表达式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylf/jdk8/SwingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ylf/jdk8/SwingTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -52,13 +51,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563878636812" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mytest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -72,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="SwingTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ylf.jdk8.SwingTest" />
       <module name="jdk8.main" />
@@ -86,8 +85,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ylf.jdk8.Test" />
+      <module name="jdk8_lecture.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ylf.jdk8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ylf.jdk8.Test2" />
+      <module name="jdk8_lecture.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ylf.jdk8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test2" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.SwingTest" />
       </list>
     </recent_temporary>
@@ -104,7 +131,10 @@
       <updated>1563876932487</updated>
       <workItem from="1563876940098" duration="248000" />
       <workItem from="1581218035967" duration="2127000" />
-      <workItem from="1581263736861" duration="376000" />
+      <workItem from="1581263736861" duration="3667000" />
+      <workItem from="1581297893121" duration="835000" />
+      <workItem from="1581309917957" duration="12000" />
+      <workItem from="1581337739928" duration="686000" />
     </task>
     <servers />
   </component>
