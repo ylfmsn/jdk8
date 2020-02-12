@@ -29,9 +29,9 @@ public class PersonTest {
     // 筛选集合中年龄大于等于25的对象，然后组成新集合并返回
     public List<Person> getPersonsByAge(int age, List<Person> persons) {
         // 1 由两个参数最后返回一个结果知使用BiFunction，首先定义BiFunction
-        BiFunction<Integer, List<Person>, List<Person>> biFunction = (ageOfPerson, personList) -> {
-            return personList.stream().filter(person -> person.getAge() >= ageOfPerson).collect(Collectors.toList());
-        };
+        BiFunction<Integer, List<Person>, List<Person>> biFunction = (ageOfPerson, personList) ->
+            personList.stream().filter(person -> person.getAge() >= ageOfPerson).collect(Collectors.toList());
+
         // 2 应用定义的BiFunction
         return biFunction.apply(age, persons);
     }
