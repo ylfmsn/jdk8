@@ -18,6 +18,11 @@ public class PersonTest {
         PersonTest personTest = new PersonTest();
         personTest.getPersonsByUsername("zhangsan", persons).forEach(person -> System.out.println(person.getUsername()));
         personTest.getPersonsByAge(25, persons).forEach(person -> System.out.println(person.getAge()));
+
+        System.out.println("--------------");
+        personTest.getPersonByAge1(25, persons, (ageVal, personsList) -> {
+            return personsList.stream().filter(person -> person.getAge() > ageVal).collect(Collectors.toList());
+        }).forEach(person -> System.out.println(person.getAge()));
     }
 
     // 筛选集合中名字为username的对象，然后组成新集合并返回
@@ -33,6 +38,11 @@ public class PersonTest {
             personList.stream().filter(person -> person.getAge() >= ageOfPerson).collect(Collectors.toList());
 
         // 2 应用定义的BiFunction
+        return biFunction.apply(age, persons);
+    }
+
+    // 将BiFunction作为参数传递，具体行为实现在调用者
+    public List<Person> getPersonByAge1(int age, List<Person> persons, BiFunction<Integer, List<Person>, List<Person>> biFunction) {
         return biFunction.apply(age, persons);
     }
 }
