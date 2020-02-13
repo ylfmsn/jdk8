@@ -19,8 +19,6 @@ public class OptionalTest2 {
         company.setName("company1");
         company.setEmployees(Arrays.asList(employee1, employee2));
 
-        List<Employee> employeeList = company.getEmployees();
-
         Optional<Company> optional = Optional.ofNullable(company);
         optional.map((item) -> item.getEmployees()).ifPresent(p -> p.forEach(e -> System.out.println(e.getName())));
 
