@@ -1,10 +1,8 @@
 package com.ylf.jdk8.stream;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamTest4 {
