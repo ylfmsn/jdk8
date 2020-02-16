@@ -1,8 +1,7 @@
 package com.ylf.jdk8.stream;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamTest4 {
@@ -24,6 +23,17 @@ public class StreamTest4 {
         List<String> list = stream1.collect(LinkedList::new, LinkedList::add, LinkedList::addAll);
         list.forEach(System.out::println);
 
+        System.out.println("------------");
+
+        Stream<String> stream2 = Stream.of("hello", "world", "helloworld");
+        Set<String> set = stream2.collect(Collectors.toCollection(TreeSet::new));
+        set.forEach(System.out::println);
+
+        System.out.println("------------");
+
+        Stream<String> stream3 = Stream.of("hello", "world", "helloworld");
+        String str = stream3.collect(Collectors.joining());
+        System.out.println(str);
 
 
     }
