@@ -20,7 +20,9 @@ public class StreamTest6 {
          * 1, 3, 5, 7, 9, 11
          * 找出大于2的元素，然后每个元素乘以2，然后忽略前俩元素，然后再取流中前俩元素，然后求元素的和
          */
+        // 省略装箱，提高性能
         int a = Stream.iterate(1, item -> item + 2).limit(6).filter(item -> item > 2).mapToInt(item -> item * 2).skip(2).limit(2).sum();
+        // 没有考虑装箱，一种通用方式
         int b = Stream.iterate(1, item -> item + 2).limit(6).filter(item -> item > 2).map(item -> item * 2).skip(2).limit(2).reduce(0, Integer::sum);
         System.out.println(a);
         System.out.println(b);
