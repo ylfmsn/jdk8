@@ -18,11 +18,13 @@
 ![binaryTree](./image/01.png "binaryTree")
 * 内部迭代
 ```
+(伪代码)
 students.stream().filter(student -> student.getAge() > 20).filter(student -> student.getAddress().equals("beijing")).
     sorted(...).forEach(student -> System.out.println(student.getName()));
 ```
 * 外部迭代
 ```
+(伪代码)
 List<Student> list = new ArrayList<>();
 
 for(int i = 0; i < list.size(); i++) {
