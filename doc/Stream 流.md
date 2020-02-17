@@ -14,3 +14,28 @@
 * 当使用串行方式去遍历时，每个item读完后再读下一个item
 * 使用并行去遍历时，数据会被分成多个段，其中每一个都在**不同的线程**中处理，然后将结果一起输出
 * Stream的并行操作依赖于Java7中引入的Fork/Join框架
+## 内部迭代 和 外部迭代
+![binaryTree](./image/01.png "binaryTree")
+* 内部迭代
+```
+students.stream().filter(student -> student.getAge() > 20).filter(student -> student.getAddress().equals("beijing")).
+    sorted(...).forEach(student -> System.out.println(student.getName()));
+```
+* 外部迭代
+```
+List<Student> list = new ArrayList<>();
+
+for(int i = 0; i < list.size(); i++) {
+    Student student = students.get(i);
+
+    if(student.getAge() > 20 && student.getAddress().equals("beijing")) {
+        list.add(student);
+    }
+}
+
+Collections.sort(list, Comparator() ...);
+
+for (Student student : list) {
+    System.out.println(student.getName());
+}
+```
