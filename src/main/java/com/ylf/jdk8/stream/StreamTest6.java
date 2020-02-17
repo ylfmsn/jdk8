@@ -1,5 +1,6 @@
 package com.ylf.jdk8.stream;
 
+import java.util.IntSummaryStatistics;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -26,5 +27,12 @@ public class StreamTest6 {
         int b = Stream.iterate(1, item -> item + 2).limit(6).filter(item -> item > 2).map(item -> item * 2).skip(2).limit(2).reduce(0, Integer::sum);
         System.out.println(a);
         System.out.println(b);
+
+        System.out.println("----------------");
+
+        IntSummaryStatistics intSummaryStatistics = Stream.iterate(1, item -> item + 2).limit(6).filter(item -> item > 2).mapToInt(item -> item * 2).skip(2).limit(2).summaryStatistics();
+        System.out.println(intSummaryStatistics.getSum());
+        System.out.println(intSummaryStatistics.getMax());
+        System.out.println(intSummaryStatistics.getMin());
     }
 }
