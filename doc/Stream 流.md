@@ -41,3 +41,6 @@ for (Student student : list) {
     System.out.println(student.getName());
 }
 ```
+* 集合关注的是数据与数据存储本身
+* 流关注的则是对数据的计算
+* 流与迭代器类似的一点是：流是无法重复使用或消费的
