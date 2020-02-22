@@ -47,3 +47,9 @@ for (Student student : list) {
 * 集合关注的是数据与数据存储本身
 * 流关注的则是对数据的计算
 * 流与迭代器类似的一点是：流是无法重复使用或消费的
+## collect: 收集器
+* Collector作为collect方法的参数
+* Collector本身是一个接口，它是一个可变的汇聚操作，将输入元素累积到一个可变的结果容器中；它会在所有元素都处理完毕后，将累积的结果转换为一个最终的表示（这是一个可选的操作）;它支持串行与并行两种方式。
+* Collectors本身提供了关于Collector的常见汇聚实现，Collectors本身实际上是一个工厂。
+* 为了确保串行和并行操作结果的等价，Collector函数需要满足两个条件：identity（同一性） 和 associativity（结合性）
+
